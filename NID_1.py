@@ -124,9 +124,7 @@ for epoch in range(20):
 	test_accuracy  = np.mean(test_y == sess.run(predict, feed_dict={X:test_X, y: test_y}))
 	print("Epoch = %d, train accuracy = %.2f%%, test accuracy = %.2f%%"% (epoch + 1, 100. * train_accuracy, 100. *test_accuracy))
 
-    #test_accuracy  = np.mean(np.argmax(test_y, axis=1) == sess.run(predict, feed_dict={X:test_X, y: test_y}))
-    #print("Epoch = %d, train accuracy = %.2f%%, test accuracy = %.2f%%" % (epoch+1,100.*train_accuracy, 100. * test_accuracy))
-    #print ("Predict: " %(predict) )
+
 
 
 
