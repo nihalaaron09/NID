@@ -57,13 +57,13 @@ def load_data(label_dict):
     return (x,y)
 
 
-train_labels_filename = '/cfarhomes/nihal09/Documents/KDDlabels/Py_Extracted_train_full.txt'
-#train_labels_filename = '/cfarhomes/nihal09/Documents/KDDlabels/Extracted_KDD_train_full.txt'
+#train_labels_filename = '/cfarhomes/nihal09/Documents/KDDlabels/Py_Extracted_train_full.txt'
+train_labels_filename = '/cfarhomes/nihal09/Documents/KDDlabels/Extracted_KDD_train_full.txt'
 train_labels_dict = read_csv(train_labels_filename);
 
 
-test_labels_filename = '/cfarhomes/nihal09/Documents/KDDlabels/Py_Extracted_test_full.txt'
-#test_labels_filename = '/cfarhomes/nihal09/Documents/KDDlabels/Extracted_KDD_test_full.txt'
+#test_labels_filename = '/cfarhomes/nihal09/Documents/KDDlabels/Py_Extracted_test_full.txt'
+test_labels_filename = '/cfarhomes/nihal09/Documents/KDDlabels/Extracted_KDD_test_full.txt'
 test_labels_dict = read_csv(test_labels_filename);
 
 train_X, train_y = load_data(train_labels_dict);
@@ -102,7 +102,7 @@ predict=tf.cast(tf.less(constant_val,yhat), tf.float32  )
 # Backward propagation 
 cost=tf.squared_difference(yhat,y)
 #cost    = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=y, logits=yhat))
-updates = tf.train.GradientDescentOptimizer(0.01).minimize(cost)
+updates = tf.train.GradientDescentOptimizer(0.000001).minimize(cost)
 
 
 # accuracy test
