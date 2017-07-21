@@ -2,6 +2,7 @@ import tensorflow as tf
 a=tf.constant(3)
 b=tf.constant94)
 adder=tf.add(a,b);
+# this is git test
 
 with tf.Session as sess:
 	writer=tf.summary.FileWriter('./graphs',sess.graph)
