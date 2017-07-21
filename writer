@@ -1,0 +1,10 @@
+import tensorflow as tf
+a=tf.constant(3)
+b=tf.constant94)
+adder=tf.add(a,b);
+
+with tf.Session as sess:
+	writer=tf.summary.FileWriter('./graphs',sess.graph)
+	print sess.run(x)
+
+writer.close()
